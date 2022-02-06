@@ -11,11 +11,8 @@ function createGrid() {
 
     if(toggle) {
         size = +prompt('Enter number N from 1 to 100 for N x N Grid');
-        console.log(size);
         if(!(size >=1 && size <= 100)) alert('Error. Click "Create New Grid" to try again.');
     }
-
-    console.log(size);
 
     const height = 960/size;
     const styleHeight = height + 'px';
@@ -34,8 +31,17 @@ function createGrid() {
     }
 }
 
+function changeColor(e) {
+    if(e.target.className = 'square') {
+        e.target.style.backgroundColor = 'black';
+
+    }
+}
+
 const createBtn = document.querySelector('.create');
 const main = document.querySelector('.main');
+console.log(main);
+
 let toggle = false;
 
 createBtn.addEventListener('click', toggleGrid);
@@ -43,4 +49,6 @@ createBtn.addEventListener('click', clearGrid);
 createBtn.addEventListener('click', createGrid);
 
 createGrid();
+
+main.addEventListener('mouseover', changeColor);
 
