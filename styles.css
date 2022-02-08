@@ -9,14 +9,14 @@ body {
 .main {
     width: 960px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    border: 0.25rem solid #000; 
 }
 .row {
     display: flex;
 }
 
 .square {
-    border: 1px solid black;
     flex: 1;
 }
 
